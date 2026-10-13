@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "autoname": "format:BP-TE-{YYYY}-{#####}",
+ "creation": "2026-10-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "warehouse",
+  "temperature_zone",
+  "temperature_log",
+  "excursion_start",
+  "excursion_end",
+  "duration_minutes",
+  "column_break_0",
+  "peak_temperature",
+  "status",
+  "affected_section",
+  "affected_batches",
+  "disposition_section",
+  "disposition",
+  "investigation_summary",
+  "released_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "temperature_zone",
+   "fieldtype": "Link",
+   "label": "Temperature Zone",
+   "options": "Temperature Zone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "temperature_log",
+   "fieldtype": "Link",
+   "label": "Temperature Log",
+   "options": "Temperature Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "excursion_start",
+   "fieldtype": "Datetime",
+   "label": "Excursion Start"
+  },
+  {
+   "fieldname": "excursion_end",
+   "fieldtype": "Datetime",
+   "label": "Excursion End"
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (minutes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "peak_temperature",
+   "fieldtype": "Float",
+   "label": "Peak Temperature (C)",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nUnder Investigation\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "affected_section",
+   "fieldtype": "Section Break",
+   "label": "Affected Batches"
+  },
+  {
+   "fieldname": "affected_batches",
+   "fieldtype": "Table",
+   "label": "Affected Batches",
+   "options": "Temperature Excursion Batch"
+  },
+  {
+   "fieldname": "disposition_section",
+   "fieldtype": "Section Break",
+   "label": "QA Disposition"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "disposition",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Disposition",
+   "options": "Pending\nRelease Batches\nReject Batches"
+  },
+  {
+   "fieldname": "investigation_summary",
+   "fieldtype": "Small Text",
+   "label": "Investigation Summary"
+  },
+  {
+   "fieldname": "released_by",
+   "fieldtype": "Link",
+   "label": "Closed By",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cold Chain",
+ "name": "Temperature Excursion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QP",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QA Officer",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma GMP Warehouse"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

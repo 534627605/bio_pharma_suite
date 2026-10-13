@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "autoname": "field:reason_code",
+ "creation": "2026-10-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reason_code",
+  "reason_type",
+  "column_break_0",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reason Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "reason_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Reason Type",
+   "options": "Release Veto\nDeviation Classification\nConcession\nDisposition",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance Foundation",
+ "name": "Reason Code",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QA Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Bio Pharma QP"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

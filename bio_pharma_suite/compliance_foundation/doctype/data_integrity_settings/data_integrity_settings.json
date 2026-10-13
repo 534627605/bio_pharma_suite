@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "creation": "2026-10-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "compliance_section",
+  "require_esignature_on_qi",
+  "require_effective_test_method",
+  "column_break_0",
+  "cold_chain_guard_enabled",
+  "cold_chain_require_qualified_warehouse",
+  "excursion_auto_hold",
+  "planning_section",
+  "retention_sample_days",
+  "license_expiry_warn_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "GMP Compliance Controls"
+  },
+  {
+   "default": "0",
+   "description": "Quality Inspection flagged esign_required cannot be submitted without e-signature confirmation",
+   "fieldname": "require_esignature_on_qi",
+   "fieldtype": "Check",
+   "label": "Require E-Signature on Quality Inspection"
+  },
+  {
+   "default": "0",
+   "description": "Quality Inspection must reference an in-force Test Method version",
+   "fieldname": "require_effective_test_method",
+   "fieldtype": "Check",
+   "label": "Require Effective Test Method Version"
+  },
+  {
+   "fieldname": "column_break_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "cold_chain_guard_enabled",
+   "fieldtype": "Check",
+   "label": "Cold Chain Guard Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "cold_chain_require_qualified_warehouse",
+   "fieldtype": "Check",
+   "label": "Cold Chain Items Require GMP-Qualified Warehouse"
+  },
+  {
+   "default": "1",
+   "fieldname": "excursion_auto_hold",
+   "fieldtype": "Check",
+   "label": "Auto-create Excursion on Out-of-range Temperature Log"
+  },
+  {
+   "fieldname": "planning_section",
+   "fieldtype": "Section Break",
+   "label": "Planning Parameters"
+  },
+  {
+   "default": "0",
+   "fieldname": "retention_sample_days",
+   "fieldtype": "Int",
+   "label": "Retention Sample Days"
+  },
+  {
+   "default": "90",
+   "fieldname": "license_expiry_warn_days",
+   "fieldtype": "Int",
+   "label": "License Expiry Warn Days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance Foundation",
+ "name": "Data Integrity Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Bio Pharma QP",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

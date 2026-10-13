@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "autoname": "format:SP-{#####}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sampling_point_name",
+  "col_link",
+  "linked_warehouse",
+  "linked_workstation",
+  "description",
+  "is_active"
+ ],
+ "fields": [
+  {"fieldname":"sampling_point_name","fieldtype":"Data","label":"Sampling Point Name","reqd":1,"in_list_view":1},
+  {"fieldname":"col_link","fieldtype":"Column Break"},
+  {"fieldname":"linked_warehouse","fieldtype":"Link","label":"Linked Warehouse","options":"Warehouse","in_standard_filter":1},
+  {"fieldname":"linked_workstation","fieldtype":"Link","label":"Linked Workstation","options":"Workstation","in_standard_filter":1},
+  {"fieldname":"description","fieldtype":"Small Text","label":"Description"},
+  {"fieldname":"is_active","fieldtype":"Check","label":"Active","default":1,"in_list_view":1,"in_standard_filter":1}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-12 12:00:00.000000",
+ "module": "LIMS",
+ "name": "Sampling Point",
+ "owner": "Administrator",
+ "permissions": [
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"report":1,"email":1,"share":1},
+  {"role":"Bio Pharma Lab Supervisor","read":1,"write":1,"create":1,"report":1},
+  {"role":"Bio Pharma QC Analyst","read":1,"write":1,"create":1,"report":1},
+  {"role":"Bio Pharma QA Officer","read":1,"report":1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

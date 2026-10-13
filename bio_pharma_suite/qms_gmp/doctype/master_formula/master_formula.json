@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "autoname": "format:BP-MF-{#####}",
+ "creation": "2026-10-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "formula_name",
+  "item_code",
+  "bom_no",
+  "routing",
+  "column_break_0",
+  "active_version",
+  "section_versions",
+  "versions",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "formula_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Formula Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bom_no",
+   "fieldtype": "Link",
+   "label": "BOM (Controlled)",
+   "options": "BOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "routing",
+   "fieldtype": "Link",
+   "label": "Routing",
+   "options": "Routing"
+  },
+  {
+   "fieldname": "column_break_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "active_version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Active Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_versions",
+   "fieldtype": "Section Break",
+   "label": "Controlled Versions"
+  },
+  {
+   "fieldname": "versions",
+   "fieldtype": "Table",
+   "label": "Versions",
+   "options": "Master Formula Version",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Production",
+   "link_doctype": "Work Order",
+   "link_fieldname": "master_formula"
+  },
+  {
+   "group": "Records",
+   "link_doctype": "Batch Production Record",
+   "link_fieldname": "master_formula"
+  }
+ ],
+ "modified": "2026-10-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "QMS GMP",
+ "name": "Master Formula",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QA Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QP",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma Lab Supervisor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

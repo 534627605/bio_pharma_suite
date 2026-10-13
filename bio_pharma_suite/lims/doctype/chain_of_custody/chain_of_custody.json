@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "custody_action",
+  "from_party",
+  "to_party",
+  "col_custody",
+  "custody_datetime",
+  "location",
+  "purpose",
+  "scan_verified",
+  "remarks"
+ ],
+ "fields": [
+  {"fieldname":"custody_action","fieldtype":"Select","label":"Custody Action","options":"Registration\nHandover\nReceipt\nReturn\nDisposal","default":"Handover","in_list_view":1,"reqd":1},
+  {"fieldname":"from_party","fieldtype":"Link","label":"From","options":"User","in_list_view":1},
+  {"fieldname":"to_party","fieldtype":"Link","label":"To","options":"User","in_list_view":1},
+  {"fieldname":"col_custody","fieldtype":"Column Break"},
+  {"fieldname":"custody_datetime","fieldtype":"Datetime","label":"Datetime","in_list_view":1},
+  {"fieldname":"location","fieldtype":"Data","label":"Location"},
+  {"fieldname":"purpose","fieldtype":"Small Text","label":"Purpose"},
+  {"fieldname":"scan_verified","fieldtype":"Check","label":"Scan Verified (Barcode/QR)","in_list_view":1,"default":0},
+  {"fieldname":"remarks","fieldtype":"Small Text","label":"Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-12 12:00:00.000000",
+ "module": "LIMS",
+ "name": "Chain of Custody",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

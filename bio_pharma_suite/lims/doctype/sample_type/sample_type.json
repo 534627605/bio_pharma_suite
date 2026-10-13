@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "autoname": "format:ST-{#####}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sample_type_name",
+  "col_details",
+  "default_test_method",
+  "required_storage",
+  "retention_days",
+  "description",
+  "is_active"
+ ],
+ "fields": [
+  {"fieldname":"sample_type_name","fieldtype":"Data","label":"Sample Type Name","reqd":1,"in_list_view":1},
+  {"fieldname":"col_details","fieldtype":"Column Break"},
+  {"fieldname":"default_test_method","fieldtype":"Link","label":"Default Test Method","options":"Test Method","in_list_view":1},
+  {"fieldname":"required_storage","fieldtype":"Link","label":"Required Storage","options":"Temperature Zone","in_standard_filter":1},
+  {"fieldname":"retention_days","fieldtype":"Int","label":"Retention Days (Sample Retention)"},
+  {"fieldname":"description","fieldtype":"Small Text","label":"Description"},
+  {"fieldname":"is_active","fieldtype":"Check","label":"Active","default":1,"in_list_view":1,"in_standard_filter":1}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-12 12:00:00.000000",
+ "module": "LIMS",
+ "name": "Sample Type",
+ "owner": "Administrator",
+ "permissions": [
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"report":1,"email":1,"share":1},
+  {"role":"Bio Pharma Lab Supervisor","read":1,"write":1,"create":1,"report":1,"email":1},
+  {"role":"Bio Pharma QC Analyst","read":1,"write":1,"create":1,"report":1},
+  {"role":"Bio Pharma QA Officer","read":1,"report":1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "autoname": "format:BP-TL-{YYYY}-{#####}",
+ "creation": "2026-10-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "warehouse",
+  "temperature_zone",
+  "reading_timestamp",
+  "temperature",
+  "source",
+  "column_break_0",
+  "has_excursion",
+  "excursion"
+ ],
+ "fields": [
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "temperature_zone",
+   "fieldtype": "Link",
+   "label": "Temperature Zone",
+   "options": "Temperature Zone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reading_timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Reading Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Temperature (C)",
+   "reqd": 1
+  },
+  {
+   "default": "Manual",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "IoT API\nManual\nCSV Import"
+  },
+  {
+   "fieldname": "column_break_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_excursion",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Out of Range",
+   "read_only": 1
+  },
+  {
+   "fieldname": "excursion",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Excursion",
+   "options": "Temperature Excursion",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cold Chain",
+ "name": "Temperature Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma GMP Warehouse",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QP"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QA Officer"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

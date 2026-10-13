@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "test_method",
+  "instrument",
+  "col_result",
+  "specification",
+  "result_value",
+  "result_status",
+  "tested_by",
+  "tested_on",
+  "remarks"
+ ],
+ "fields": [
+  {"fieldname":"test_method","fieldtype":"Link","label":"Test Method","options":"Test Method","reqd":1,"in_list_view":1},
+  {"fieldname":"instrument","fieldtype":"Link","label":"Instrument","options":"Instrument","in_list_view":1},
+  {"fieldname":"col_result","fieldtype":"Column Break"},
+  {"fieldname":"specification","fieldtype":"Small Text","label":"Specification / Acceptance Criteria"},
+  {"fieldname":"result_value","fieldtype":"Data","label":"Result Value","in_list_view":1},
+  {"fieldname":"result_status","fieldtype":"Select","label":"Result Status","options":"Pending\nPass\nFail","default":"Pending","in_list_view":1,"in_standard_filter":1},
+  {"fieldname":"tested_by","fieldtype":"Link","label":"Tested By","options":"User"},
+  {"fieldname":"tested_on","fieldtype":"Datetime","label":"Tested On"},
+  {"fieldname":"remarks","fieldtype":"Small Text","label":"Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-12 12:00:00.000000",
+ "module": "LIMS",
+ "name": "Lab Sample Test",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

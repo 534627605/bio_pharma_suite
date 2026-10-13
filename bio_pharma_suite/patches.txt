@@ -1,0 +1,4 @@
+[pre_model_sync]
+
+[post_model_sync]
+bio_pharma_suite.patches.post_install.setup_bio_pharma_roles
