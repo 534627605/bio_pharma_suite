@@ -3,13 +3,15 @@
   "name": "Regulation Library",
   "module": "Regulatory Affairs",
   "autoname": "format:BP-RL-{#####}",
-  "field_order": ["regulation_code", "regulation_title", "effective_from", "effective_upto", "status"],
+  "field_order": ["regulation_code", "regulation_title", "effective_from", "effective_upto", "status", "section_clauses", "clauses", "remarks"],
   "fields": [
     {"fieldname":"regulation_code","fieldtype":"Data","label":"Regulation Code","reqd":1},
     {"fieldname":"regulation_title","fieldtype":"Data","label":"Regulation Title","reqd":1},
     {"fieldname":"effective_from","fieldtype":"Date","label":"Effective From"},
     {"fieldname":"effective_upto","fieldtype":"Date","label":"Effective Upto"},
     {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Draft\nIn Review\nApproved\nWithdrawn"},
+    {"fieldname":"section_clauses","fieldtype":"Section Break","label":"Clauses"},
+    {"fieldname":"clauses","fieldtype":"Table","label":"Regulation Clauses","options":"Regulation Clause"},
     {"fieldname":"remarks","fieldtype":"Small Text","label":"Remarks"}
   ],
   "links": [],

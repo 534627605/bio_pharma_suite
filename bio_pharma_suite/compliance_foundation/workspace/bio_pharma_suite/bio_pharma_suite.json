@@ -1,0 +1,227 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"aB3kLm9QzX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lab Sample\",\"col\":3}},{\"id\":\"cD7nRt2WvE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Test Method\",\"col\":3}},{\"id\":\"eF1pSv8YhK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Instrument\",\"col\":3}},{\"id\":\"gH5qWz4JcN\",\"type\":\"spacer\",\"data\":{\"col\":3}},{\"id\":\"iJ9xBn6VkM\",\"type\":\"card\",\"data\":{\"card_name\":\"Laboratory\",\"col\":4}},{\"id\":\"kL3zQp2RtY\",\"type\":\"card\",\"data\":{\"card_name\":\"Quality & Compliance\",\"col\":4}},{\"id\":\"mN7wSd8FgH\",\"type\":\"card\",\"data\":{\"card_name\":\"Cold Chain\",\"col\":4}}]",
+ "creation": "2026-10-14 10:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "quality-seal-duotone",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Bio Pharma Suite",
+ "links": [
+  {
+   "description": "Laboratory sample lifecycle and method management",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Sample",
+   "link_count": 0,
+   "link_to": "Lab Sample",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Sample Test",
+   "link_count": 0,
+   "link_to": "Lab Sample Test",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Test Method",
+   "link_count": 0,
+   "link_to": "Test Method",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Instrument",
+   "link_count": 0,
+   "link_to": "Instrument",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sample Type",
+   "link_count": 0,
+   "link_to": "Sample Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sampling Point",
+   "link_count": 0,
+   "link_to": "Sampling Point",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "GMP documents, formulations and regulation traceability",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality & Compliance",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Controlled Document",
+   "link_count": 0,
+   "link_to": "Controlled Document",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Formula",
+   "link_count": 0,
+   "link_to": "Master Formula",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Batch Production Record",
+   "link_count": 0,
+   "link_to": "Batch Production Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulation Library",
+   "link_count": 0,
+   "link_to": "Regulation Library",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reason Code",
+   "link_count": 0,
+   "link_to": "Reason Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Temperature control and excursion management",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cold Chain",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Temperature Zone",
+   "link_count": 0,
+   "link_to": "Temperature Zone",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Temperature Log",
+   "link_count": 0,
+   "link_to": "Temperature Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Temperature Excursion",
+   "link_count": 0,
+   "link_to": "Temperature Excursion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-10-14 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance Foundation",
+ "name": "Bio Pharma Suite",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 99,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Lab Sample",
+   "link_to": "Lab Sample",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Test Method",
+   "link_to": "Test Method",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Instrument",
+   "link_to": "Instrument",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "standard": 1,
+ "title": "Bio Pharma Suite",
+ "type": "Workspace"
+}

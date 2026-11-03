@@ -20,26 +20,169 @@
   "calibration_frequency_days",
   "col_calibration",
   "next_calibration_date",
+  "interface_section",
+  "data_protocol",
+  "interface_endpoint",
+  "col_interface",
+  "auth_method",
+  "api_user",
+  "data_format",
+  "active_interface",
+  "last_data_sync",
   "remarks"
  ],
  "fields": [
-  {"fieldname":"instrument_details_section","fieldtype":"Section Break","label":"Instrument Details"},
-  {"fieldname":"instrument_name","fieldtype":"Data","label":"Instrument Name","reqd":1,"in_list_view":1},
-  {"fieldname":"instrument_code","fieldtype":"Data","label":"Instrument Code","unique":1},
-  {"fieldname":"col_details","fieldtype":"Column Break"},
-  {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Active\nQuarantined\nRetired","default":"Active","in_list_view":1,"in_standard_filter":1},
-  {"fieldname":"location","fieldtype":"Data","label":"Location"},
-  {"fieldname":"custodian","fieldtype":"Link","label":"Custodian","options":"User"},
-  {"fieldname":"identification_section","fieldtype":"Section Break","label":"Identification"},
-  {"fieldname":"manufacturer","fieldtype":"Data","label":"Manufacturer"},
-  {"fieldname":"model_no","fieldtype":"Data","label":"Model"},
-  {"fieldname":"serial_no","fieldtype":"Data","label":"Serial No"},
-  {"fieldname":"calibration_section","fieldtype":"Section Break","label":"Calibration"},
-  {"fieldname":"last_calibration_date","fieldtype":"Date","label":"Last Calibration Date"},
-  {"fieldname":"calibration_frequency_days","fieldtype":"Int","label":"Calibration Frequency (Days)"},
-  {"fieldname":"col_calibration","fieldtype":"Column Break"},
-  {"fieldname":"next_calibration_date","fieldtype":"Date","label":"Next Calibration Date","read_only":1,"in_list_view":1},
-  {"fieldname":"remarks","fieldtype":"Small Text","label":"Remarks"}
+  {
+   "fieldname": "instrument_details_section",
+   "fieldtype": "Section Break",
+   "label": "Instrument Details"
+  },
+  {
+   "fieldname": "instrument_name",
+   "fieldtype": "Data",
+   "label": "Instrument Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "instrument_code",
+   "fieldtype": "Data",
+   "label": "Instrument Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "col_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nQuarantined\nRetired",
+   "default": "Active",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "custodian",
+   "fieldtype": "Link",
+   "label": "Custodian",
+   "options": "User"
+  },
+  {
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "model_no",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No"
+  },
+  {
+   "fieldname": "calibration_section",
+   "fieldtype": "Section Break",
+   "label": "Calibration"
+  },
+  {
+   "fieldname": "last_calibration_date",
+   "fieldtype": "Date",
+   "label": "Last Calibration Date"
+  },
+  {
+   "fieldname": "calibration_frequency_days",
+   "fieldtype": "Int",
+   "label": "Calibration Frequency (Days)"
+  },
+  {
+   "fieldname": "col_calibration",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_calibration_date",
+   "fieldtype": "Date",
+   "label": "Next Calibration Date",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "interface_section",
+   "fieldtype": "Section Break",
+   "label": "Data Interface"
+  },
+  {
+   "fieldname": "data_protocol",
+   "fieldtype": "Select",
+   "label": "Data Protocol",
+   "options": "Manual\nREST Push\nMQTT\nOPC-UA\nSerial-CSV\nFile Drop",
+   "default": "Manual",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "interface_endpoint",
+   "fieldtype": "Data",
+   "label": "Interface Endpoint",
+   "depends_on": "eval:doc.data_protocol!='Manual'"
+  },
+  {
+   "fieldname": "col_interface",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_method",
+   "fieldtype": "Select",
+   "label": "Auth Method",
+   "options": "\nAPI Key (token)\nOAuth Bearer\nNone",
+   "depends_on": "eval:doc.data_protocol!='Manual'"
+  },
+  {
+   "fieldname": "data_format",
+   "fieldtype": "Select",
+   "label": "Data Format",
+   "options": "JSON\nCSV\nBinary",
+   "default": "JSON",
+   "depends_on": "eval:doc.data_protocol!='Manual'"
+  },
+  {
+   "fieldname": "active_interface",
+   "fieldtype": "Check",
+   "label": "Interface Active"
+  },
+  {
+   "fieldname": "last_data_sync",
+   "fieldtype": "Datetime",
+   "label": "Last Data Sync",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "api_user",
+   "label": "Bound API User",
+   "fieldtype": "Link",
+   "options": "User",
+   "insert_after": "auth_method",
+   "description": "When set, only this user (or System Manager) may push readings for this instrument."
+  }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
@@ -48,10 +191,34 @@
  "name": "Instrument",
  "owner": "Administrator",
  "permissions": [
-  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"report":1,"email":1,"share":1},
-  {"role":"Bio Pharma Lab Supervisor","read":1,"write":1,"create":1,"report":1,"email":1},
-  {"role":"Bio Pharma QC Analyst","read":1,"report":1},
-  {"role":"Bio Pharma QA Officer","read":1,"report":1}
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Bio Pharma Lab Supervisor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "email": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "report": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",

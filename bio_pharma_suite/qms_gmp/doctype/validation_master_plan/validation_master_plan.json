@@ -1,0 +1,153 @@
+{
+ "doctype": "DocType",
+ "name": "Validation Master Plan",
+ "module": "QMS GMP",
+ "autoname": "format:VMP-{YY}-{#####}",
+ "is_submittable": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_section",
+  "plan_year",
+  "title",
+  "col_p",
+  "status",
+  "responsible",
+  "scope_section",
+  "validation_scope",
+  "activities",
+  "summary_section",
+  "total_activities",
+  "col_s2",
+  "overdue_count",
+  "close_section",
+  "esign_confirmed",
+  "closed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Section"
+  },
+  {
+   "fieldname": "plan_year",
+   "fieldtype": "Int",
+   "label": "Plan Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_p",
+   "fieldtype": "Column Break",
+   "label": "Col P"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nCompleted",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "User"
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Scope Section"
+  },
+  {
+   "fieldname": "validation_scope",
+   "fieldtype": "Small Text",
+   "label": "Validation Scope"
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Table",
+   "label": "Validation Activities",
+   "reqd": 1,
+   "options": "Validation Activity"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary Section"
+  },
+  {
+   "fieldname": "total_activities",
+   "fieldtype": "Int",
+   "label": "Total Activities",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_s2",
+   "fieldtype": "Column Break",
+   "label": "Col S2"
+  },
+  {
+   "fieldname": "overdue_count",
+   "fieldtype": "Int",
+   "label": "Overdue Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "close_section",
+   "fieldtype": "Section Break",
+   "label": "Close Section"
+  },
+  {
+   "fieldname": "esign_confirmed",
+   "fieldtype": "Check",
+   "label": "E-Signature Confirmed"
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Date",
+   "label": "Closed On"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Bio Pharma QP",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "report": 1
+  }
+ ],
+ "track_changes": 1
+}

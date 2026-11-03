@@ -9,6 +9,7 @@
   "require_effective_test_method",
   "column_break_0",
   "cold_chain_guard_enabled",
+  "batch_release_guard_enabled",
   "cold_chain_require_qualified_warehouse",
   "excursion_auto_hold",
   "planning_section",
@@ -44,6 +45,12 @@
    "fieldname": "cold_chain_guard_enabled",
    "fieldtype": "Check",
    "label": "Cold Chain Guard Enabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "batch_release_guard_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Batch Release Delivery Guard"
   },
   {
    "default": "1",

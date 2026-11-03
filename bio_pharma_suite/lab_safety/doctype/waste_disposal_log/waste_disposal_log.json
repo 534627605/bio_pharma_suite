@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "autoname": "format:WD-{#####}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "waste_type",
+  "waste_description",
+  "col_details",
+  "quantity",
+  "uom",
+  "disposal_date",
+  "disposal_section",
+  "disposal_method",
+  "contractor",
+  "contractor_license_no",
+  "col_disposal",
+  "status",
+  "handled_by",
+  "verified_by",
+  "remarks",
+  "accounting_section",
+  "disposal_cost",
+  "purchase_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Waste Details"
+  },
+  {
+   "fieldname": "waste_type",
+   "fieldtype": "Select",
+   "label": "Waste Type",
+   "options": "Chemical\nBiological\nSharps\nSolvent\nGeneral",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "waste_description",
+   "fieldtype": "Small Text",
+   "label": "Waste Description"
+  },
+  {
+   "fieldname": "col_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "disposal_date",
+   "fieldtype": "Date",
+   "label": "Disposal Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "disposal_section",
+   "fieldtype": "Section Break",
+   "label": "Disposal"
+  },
+  {
+   "fieldname": "disposal_method",
+   "fieldtype": "Select",
+   "label": "Disposal Method",
+   "options": "Incineration\nAutoclave\nLicensed Contractor\nChemical Neutralization",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Data",
+   "label": "Contractor"
+  },
+  {
+   "fieldname": "contractor_license_no",
+   "fieldtype": "Data",
+   "label": "Contractor License No"
+  },
+  {
+   "fieldname": "col_disposal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nDisposed\nVerified",
+   "default": "Pending",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "handled_by",
+   "fieldtype": "Link",
+   "label": "Handled By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "accounting_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "disposal_cost",
+   "fieldtype": "Currency",
+   "label": "Disposal Cost"
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "options": "Purchase Invoice",
+   "label": "Contractor Invoice"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-14 09:00:00.000000",
+ "module": "Lab Safety",
+ "name": "Waste Disposal Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Bio Pharma Lab Supervisor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "report": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

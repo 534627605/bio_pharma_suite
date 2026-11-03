@@ -1,0 +1,26 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["timepoint_months", "interval_days", "scheduled_date", "sample_created", "lab_sample", "result_status", "remarks"],
+ "fields": [
+  {"fieldname": "timepoint_months", "fieldtype": "Int", "label": "Timepoint (Months)", "in_list_view": 1, "columns": 2},
+  {"fieldname": "interval_days", "fieldtype": "Int", "label": "Interval (Days, Overrides Months)", "in_list_view": 1, "columns": 2},
+  {"fieldname": "scheduled_date", "fieldtype": "Date", "label": "Scheduled Date", "in_list_view": 1, "columns": 2},
+  {"fieldname": "sample_created", "fieldtype": "Check", "label": "Sample Created", "read_only": 1, "in_list_view": 1, "columns": 1},
+  {"fieldname": "lab_sample", "fieldtype": "Link", "label": "Lab Sample", "options": "Lab Sample", "read_only": 1, "in_list_view": 1, "columns": 3},
+  {"fieldname": "result_status", "fieldtype": "Select", "label": "Result Status", "options": "Pending\nPass\nFail", "default": "Pending", "read_only": 1, "in_list_view": 1, "columns": 2, "in_standard_filter": 1},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-14 10:00:00.000000",
+ "module": "LIMS",
+ "name": "Stability Timepoint",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

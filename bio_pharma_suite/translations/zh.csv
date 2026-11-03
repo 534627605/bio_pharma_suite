@@ -1,0 +1,576 @@
+source,translation,max_length
+Lab Sample,实验室样品
+Lab Sample Test,样品检验行
+Test Method,检验方法
+Sample Type,样品类型
+Sampling Point,采样点
+Instrument,仪器
+Chain of Custody,样品流转记录
+Master Formula,工艺配方
+Master Formula Version,工艺配方版本
+Batch Production Record,批生产记录
+Controlled Document,受控文件
+Temperature Zone,温区
+Temperature Log,温度记录
+Temperature Excursion,温度越限
+Temperature Excursion Batch,越限关联批次
+Regulation Library,法规库
+Regulation Clause,法规条款
+Reason Code,原因代码
+Data Integrity Settings,数据完整性设置
+Active,启用
+Active Version,生效版本
+Affected Batches,受影响批次
+Applicability,适用范围
+Approved By,批准人
+Assembled On,汇编时间
+Auto-create Excursion on Out-of-range Temperature Log,温度记录越限时自动创建越限事件
+BOM (Controlled),受控 BOM
+Barcode / QR (Auto Generated),条码/二维码（自动生成）
+Batch,批次
+Calibration,校准
+Calibration Frequency (Days),校准周期（天）
+Change Remarks,变更备注
+Clause No,条款编号
+Clause Text,条款内容
+Clause Title,条款标题
+Closed By,关闭人
+Cold Chain Guard Enabled,启用冷链守卫
+Cold Chain Items Require GMP-Qualified Warehouse,冷链物料要求 GMP 合格仓库
+Collected By,采样人
+Collection Date,采样日期
+Collection Details,采样详情
+Compiled Data (JSON),汇编数据（JSON）
+Compiled Record,汇编记录
+Compliance & Disposition,合规与处置
+Content File,内容文件
+Controlled Document (SOP),受控文件（SOP）
+Controlled Versions,受控版本
+Current,当前
+Current Version,当前版本
+Custodian,保管人
+Custody Action,交接动作
+Custody Log,交接日志
+Datetime,时间
+Default Test Method,默认检验方法
+Department,部门
+Description,描述
+Deviations Found,发现偏差
+Disposition,处置
+Disposition Date,处置日期
+Document Code,文件编号
+Document Status,文件状态
+Document Tier,文件层级
+Due Date,截止日期
+Duration (minutes),时长（分钟）
+E-Signature Confirmed,电子签名已确认
+Effective,生效
+Effective From,生效日期
+Effective Upto,失效日期
+Excursion,越限
+Excursion End,越限结束
+Excursion Start,越限开始
+Formula Name,配方名称
+Formula Version,配方版本
+From,从
+GMP Compliance Controls,GMP 合规控制
+Identification,标识
+Instrument Code,仪器编号
+Instrument Details,仪器详情
+Instrument Name,仪器名称
+Investigation Summary,调查摘要
+Item,物料
+Job Cards,工序工单
+Last Calibration Date,上次校准日期
+License Expiry Warn Days,证照到期预警天数
+Linked Regulation,关联法规
+Linked Warehouse,关联仓库
+Linked Workstation,关联工位
+Location,位置
+Manufacturer,制造商
+Max Temperature (C),最高温度（℃）
+Method Code,方法编号
+Method Details,方法详情
+Method Name,方法名称
+Method Type,方法类型
+Metrics,指标
+Min Temperature (C),最低温度（℃）
+Model,型号
+Next Calibration Date,下次校准日期
+Out of Range,超出范围
+Peak Temperature (C),峰值温度（℃）
+Planning Parameters,计划参数
+Priority,优先级
+Purpose,目的
+QA Disposition,QA 处置
+Quality Inspections,质量检验
+Quality Status Before,原质量状态
+Reading Timestamp,读数时间
+Reason Type,原因类型
+Reference & Content,引用与内容
+Reference Name,引用名称
+Reference Type,引用类型
+Regulation Code,法规编号
+Regulation Title,法规标题
+Regulatory References,法规引用
+Related Quality Procedure (ERPNext),关联质量规程（ERPNext）
+Remarks,备注
+Require E-Signature on Quality Inspection,质量检验需电子签名
+Require Effective Test Method Version,要求检验方法为生效版本
+Required Storage,要求存储条件
+Result Status,结果状态
+Result Value,结果值
+Retention Days (Sample Retention),留样天数
+Retention Sample Days,留样保存天数
+Routing,工序路线
+Sample Barcode (1D),样品条码（一维）
+Sample Identification,样品标识
+Sample No,样品编号
+Sample QR (Open Record URL),样品二维码（记录链接）
+Sample Quantity,样品数量
+Sample Status,样品状态
+Sample Type Name,样品类型名称
+Sampling Point Name,采样点名称
+Scan Verified (Barcode/QR),扫码核验（条码/二维码）
+Scope / Applicability,范围/适用性
+Serial No,序列号
+Source,来源
+Source Type,来源类型
+Specification / Acceptance Criteria,规格/可接受标准
+Status,状态
+Storage Condition,存储条件
+Storage Zone,存储库区
+Temperature (C),温度（℃）
+Tested By,检测人
+Tested On,检测日期
+Testing,检测
+Tests,检验项
+Title,标题
+To,至
+UOM,单位
+Validity,有效期
+Version,版本
+Versions,版本列表
+Warehouse,仓库
+Work Order,生产工单
+Zone Name,温区名称
+Draft,草稿
+In Review,审核中
+Approved,已批准
+Withdrawn,已作废
+Closed,已关闭
+Open,开启
+On Hold,冻结
+Under Investigation,调查中
+Testing Complete,检测完成
+In Testing,检测中
+In Process,处理中
+Received,已接收
+Retained,留样
+Disposed,已处置
+Returned,已退回
+Consumed,已消耗
+Handover,交接
+Receipt,接收
+Return,退还
+Disposal,销毁
+Verified,已核验
+Registered,已注册
+Pending,待处理
+Fail,不合格
+Pass,合格
+Biological,生物
+Chemical,化学
+Physical,物理
+Microbiological,微生物
+Environmental,环境
+Finished Product,成品
+Incoming Material,来料
+Routine,常规
+Urgent,紧急
+Deviation Classification,偏差分级
+Release Veto,放行否决
+Release Batches,放行批次
+Reject Batches,拒绝批次
+Concession,让步接收
+Complaint,投诉
+Quarantined,隔离
+Room Temperature,常温
+Cool (below 20 C),阴凉（20℃以下）
+Refrigerated (2 to 8 C),冷藏（2~8℃）
+Frozen (-25 to -15 C),冷冻（-25~-15℃）
+Manual,手动
+CSV Import,CSV 导入
+IoT API,IoT 接口
+Bio Pharma GMP Warehouse,生物医药 GMP 仓库
+Bio Pharma Lab Supervisor,生物医药 实验室主管
+Bio Pharma QA Officer,生物医药 QA 专员
+Bio Pharma QC Analyst,生物医药 QC 检验员
+Bio Pharma QP,生物医药 质量受权人
+Bio Pharma RA Officer,生物医药 注册专员
+Bio Pharma Suite,生物医药套件
+Bio Pharma Setup,生物医药基础设置
+Quality Management,质量管理
+Stability Study,稳定性研究
+Stability Timepoint,稳定性时间点
+Study Type,研究类型
+Standard,标准
+Start Date,开始日期
+Duration (Months),持续期（月）
+Timepoints (Auto Sampling),时间点（自动取样）
+Timepoint (Months),时间点（月）
+Interval (Days, Overrides Months),间隔（天，覆盖月设置）
+Scheduled Date,计划日期
+Sample Created,已建样品
+Responsible,负责人
+Waste Disposal Log,危废处置台账
+Safety Incident,实验室安全事故
+Lab Safety,实验室安全
+Waste Type,废物类型
+Waste Description,废物描述
+Quantity,数量
+Disposal Date,处置日期
+Disposal Method,处置方式
+Contractor,承包商
+Contractor License No,承包商许可证号
+Handled By,经手人
+Verified By,复核人
+Incident Date,事故日期
+Incident Type,事故类型
+Severity,严重程度
+Reported By,上报人
+Description & Immediate Action,描述与即时处置
+Injured Person,受伤人员
+Immediate Action Taken,已采取的即时措施
+Investigation (Required Before Submit),调查（提交前必填）
+Root Cause,根本原因
+Corrective Action,纠正措施
+Closed On,关闭日期
+Sharps,锐器
+Solvent,溶剂
+General,一般
+Incineration,焚烧
+Autoclave,高压灭菌
+Licensed Contractor,持证承包商
+Chemical Neutralization,化学中和
+Chemical Spill,化学品泄漏
+Biological Exposure,生物暴露
+Fire,火灾
+Injury,人身伤害
+Equipment Failure,设备故障
+Near Miss,未遂事件
+Minor,轻微
+Moderate,中等
+Major,严重
+Critical,危急
+Long Term,长期
+Intermediate,中间条件
+Accelerated,加速
+Planning,计划中
+Ongoing,进行中
+Completed,已完成
+Discontinued,已终止
+Handler and verifier must be different users (segregation of duties).,经手人与复核人必须为不同用户（职责分离）。
+Segregation of Duties,职责分离
+Disposal Method is required before submission.,提交前必须填写处置方式。
+Root Cause is required before submitting a Safety Incident.,提交实验室安全事故前必须填写根本原因。
+Corrective Action is required before submitting a Safety Incident.,提交实验室安全事故前必须填写纠正措施。
+Investigation Incomplete,调查未完成
+Row {0}: scheduled date {1} is before study start date.,第 {0} 行：计划日期 {1} 早于研究开始日期。
+Invalid Timepoint,时间点无效
+Duplicate scheduled dates in timepoints.,时间点存在重复的计划日期。
+Auto-created by stability timepoint scan ({0}),由稳定性时间点巡检自动创建（{0}）
+Stability sample due: {0},稳定性样品到期：{0}
+Timepoint {0} months of study {1} is due. Lab Sample {2} was created automatically.,研究 {1} 的 {0} 月时间点已到期，已自动创建实验室样品 {2}。
+Stability Timepoint {0} marked as {1}.,稳定性时间点 {0} 已标记为 {1}。
+Stability OOT/OOS Alert: {0} ({1}),稳定性 OOT/OOS 告警：{0}（{1}）
+Lab Sample {0} from Stability Study {1} (item {2}, batch {3}) has failed test(s): {4}. Investigate per ICH Q1A and record the outcome.,来自稳定性研究 {1}（物料 {2}，批次 {3}）的实验室样品 {0} 存在不合格检验项：{4}。请按 ICH Q1A 开展调查并记录结论。
+Non Conformance {0} created from Safety Incident {1}.,已从实验室安全事故 {1} 生成不符合项 {0}。
+High-severity lab incident escalated: {0},高严重度实验室安全事故已升级：{0}
+Safety Incident {0} ({1}, severity {2}) was submitted and escalated to Non Conformance {3}. QA review required.,实验室安全事故 {0}（{1}，严重度 {2}）已提交并升级为不符合项 {3}，需 QA 审阅。
+Auto-escalated from Safety Incident {0}.,由实验室安全事故 {0} 自动升级生成。
+Type: {1} | Severity: {2} | Location: {3} | Date: {4},类型：{1}｜严重度：{2}｜地点：{3}｜日期：{4}
+Description: {6},描述：{6}
+Immediate Action: {7},即时处置：{7}
+Root Cause: {8},根本原因：{8}
+Corrective Action: {9},纠正措施：{9}
+Disposal Month,处置月份
+Records,记录数
+Total Quantity,总量
+Verified Records,已核验记录数
+Licensed Contractor Records,持证第三方处置记录数
+Waste Disposal Monthly Summary,危废处置月度汇总
+Lab Sample Item,实验室样品行
+Sample Items,样品物料行
+Company,公司
+OOS Investigation,超标调查,
+Investigation Details,调查详情,
+Failed Parameters,不合格参数,
+Investigation Phase,调查阶段,
+Phase,调查阶段,
+Phase I - Laboratory Investigation,阶段一：实验室调查,
+Phase II - Full Scale Investigation,阶段二：全面调查,
+Hypothesis,初步假设,
+Laboratory Investigation,实验室调查,
+Re-test Required,需复测,
+Re-test Quality Inspection,复测检验单,
+Conclusion,结论,
+Invalid Result (Test/Handling Error),结果无效（检验/操作错误）,
+OOS Confirmed,超标确认,
+Out of Trend,超趋势,
+Impact Assessment,影响评估,
+Closure,关闭,
+E-Signature Confirmed (21 CFR Part 11),电子签名确认（21 CFR Part 11）,
+Re-test Quality Inspection must differ from the original.,复测检验单不能与原检验单相同。,
+Invalid Re-test Reference,复测引用无效,
+Investigation summary is required before closing an OOS.,关闭超标调查前必须填写调查总结。,
+Conclusion is required before closing an OOS.,关闭超标调查前必须填写结论。,
+E-Signature confirmation is required to close an OOS (21 CFR Part 11).,关闭超标调查需要电子签名确认（21 CFR Part 11）。,
+OOS Investigation {0} auto-created for rejected Quality Inspection {1}.,检验单 {1} 判定不合格，已自动创建超标调查 {0}。,
+See Quality Inspection readings,详见检验单检测读数,
+CAPA,纠正与预防措施,
+CAPA Action,纠正与预防措施行动项,
+CAPA Type,CAPA 类型,
+Corrective,纠正措施,
+Preventive,预防措施,
+Corrective and Preventive,纠正与预防,
+Effectiveness Verification,有效性验证,
+Effectiveness Check,有效性检查,
+Effectiveness Check Date,有效性检查日期,
+Effectiveness Verdict,有效性结论,
+Ineffective,无效,
+Root Cause Analysis,根因分析,
+Corrective / Preventive Actions,纠正/预防措施,
+Actions,行动项,
+Done,已完成,
+CAPA Reference,CAPA 引用,
+Invalid OOS,OOS 无效,
+CAPA Already Exists,CAPA 已存在,
+Root Cause Missing,缺少根因分析,
+Actions Missing,缺少行动项,
+Actions Not Complete,行动项未完成,
+Effectiveness Check Missing,缺少有效性检查,
+CAPA Ineffective,CAPA 无效,
+Effectiveness Not Confirmed,有效性未确认,
+CAPA Required,需要 CAPA,
+Batch Release Record,批次放行记录,
+Batch Details,批次信息,
+Compliance Checks (auto),合规核验（自动）,
+Total Accepted+Rejected QIs,检验单总数（合格+不合格）,
+Rejected QIs,不合格检验单数,
+Open OOS Investigations,未关闭 OOS 调查数,
+Unresolved Temperature Excursions,未处置温度越限数,
+Release Decision,放行决定,
+Rejection Reason,拒批原因,
+Dual Electronic Signatures (21 CFR Part 11),双人电子签名（21 CFR Part 11）,
+Prepared By (QA),制备人（QA）,
+E-Signature: Prepared By,电子签名：制备人,
+Approved By (Qualified Person),批准人（质量受权人）,
+E-Signature: Qualified Person,电子签名：质量受权人,
+Release Effective Date,放行生效日期,
+Batch {0} has been {1}.,批次 {0} 已{1}。,
+Released,放行,
+Both e-signatures (Preparer and Qualified Person) are required for batch release.,批放行必须完成双人电子签名（制备人与质量受权人）。,
+Qualified Person role (Bio Pharma QP) is required to approve batch release.,批放行批准人必须具备质量受权人（Bio Pharma QP）角色。,
+Preparer and Qualified Person must be different users (independent dual sign-off).,制备人与批准人不能是同一用户（双人独立签核）。,
+Batch {0} is not releasable: {1},批次 {0} 不满足放行条件：{1},
+Rejection reason is required when the release decision is Rejected.,放行决定为拒批时必须填写拒批原因。,
+Batch Release Record {0}: Batch {1} released to market.,批次放行记录 {0}：批次 {1} 已放行上市。,
+Batch Release Record {0}: Batch {1} REJECTED and set to Hold.,批次放行记录 {0}：批次 {1} 已拒批并置为冻结。,
+Batch release cancelled: Batch {0} reverted to Quarantine.,批放行已取消：批次 {0} 回退为待验。,
+Deviation Report,偏差报告
+Classification,分类
+Deviation Type,偏差类型
+Detected By,发现人
+Detected On,发现日期
+Issue & Response,问题与响应
+Deviation Description,偏差描述
+Immediate Action,立即措施
+Investigation,调查
+Official Non Conformance,官方不符合项
+Immediate action is required before submitting a deviation report.,提交偏差报告前必须填写立即措施。
+Critical/Major deviations require a closed CAPA before submission (GMP).,重大/严重偏差必须先闭环 CAPA 后方可提交（GMP 要求）。
+Official Non Conformance {0} auto-created for deviation {1}.,偏差 {1} 已自动开立官方不符合项 {0}。
+A CAPA already exists for Deviation {0}.,偏差 {0} 已存在关联 CAPA。
+Change Control,变更控制,
+Change Type,变更类型,
+Document Change,文件变更,
+Process Change,工艺变更,
+Equipment Change,设备变更,
+Supplier Change,供应商变更,
+Other,其他,
+Requested By,申请人,
+Reason,变更原因,
+Planned,计划中,
+Under Review,评估中,
+Implemented,已实施,
+Change Control Already Exists,变更单已存在,
+A Change Control already exists for CAPA {0}.,CAPA {0} 已存在关联变更单。,
+Change arising from CAPA {0},CAPA {0} 引发的变更,
+Impact Assessment Missing,缺少影响评估,
+Impact assessment is required before submitting a Change Control (GMP requirement).,变更控制提交前必须完成影响评估（GMP 要求）。,
+Change Not Approved,变更未批准,
+Change Control must be Approved or Implemented before submission. Current status: {0}.,变更单必须处于“已批准”或“已实施”状态才可提交。当前状态：{0}。,
+Controlled Document {0} does not exist.,受控文件 {0} 不存在。,
+CAPA {0} does not exist.,CAPA {0} 不存在。,
+E-Signature confirmation is required to close a Change Control (21 CFR Part 11).,关闭变更单需要电子签名确认（21 CFR Part 11）。,
+Change Control {0} closed. Remember to update affected Controlled Documents and re-train users.,变更单 {0} 已关闭。请记得更新相关受控文件并组织再培训。,
+Create Change Control,开立变更单,
+Training Record,培训记录,
+Training Participant,培训参与者,
+Training Type,培训类型,
+Initial,岗前培训,
+Retraining,再培训,
+Periodic,周期培训,
+Read Training,阅知培训,
+Training Date,培训日期,
+Trainer,培训讲师,
+Participants,参训人员,
+Participant,参训人,
+Employee Name,员工姓名,
+Result,考核结果,
+Completed On,完成日期,
+Result Summary,结果汇总,
+Pass Count,合格人数,
+Fail Count,不合格人数,
+Document Version,文件版本,
+All participants must pass before submitting a Training Record.,培训记录提交前所有参训人员考核必须合格。,
+Controlled Document {0} is not Effective. Train on the effective version only.,受控文件 {0} 非生效状态。只能针对生效版本培训。,
+Document version mismatch: Training Record targets {0} but current version is {1}.,文件版本不匹配：培训记录针对 {0}，当前版本为 {1}。,
+E-Signature confirmation is required to close a Training Record (21 CFR Part 11).,关闭培训记录需要电子签名确认（21 CFR Part 11）。,
+Training Record {0} closed.,培训记录 {0} 已关闭。,
+Retraining record {0} auto-created for changed document {1}.,已为变更文件 {1} 自动创建再培训记录 {0}。,
+Enable Batch Release Delivery Guard,启用批放行出库门禁,
+Batch Not Released,批次未放行,
+Certificate of Analysis,检验报告书（COA）,
+COA Batch Release,COA 检验报告书,
+Product License,产品注册证,
+License No,证书编号,
+License Name,证书名称,
+License Type,证书类型,
+Issuing Authority,颁发机构,
+Issue Date,颁发日期,
+Expiry Date,到期日期,
+Reminder Days,预警天数,
+License Attachment,证书附件,
+Drug Registration,药品注册,
+Device Registration,器械注册,
+Food Production License,食品生产许可,
+Business License,营业执照,
+Expiring Soon,即将到期,
+Expired,已到期,
+Revoked,已吊销,
+License Expired,证书已过期,
+License Expiring Soon,证书即将到期,
+Validation Master Plan,验证主计划,
+Validation Activity,验证活动,
+Plan Year,计划年度,
+Validation Scope,验证范围,
+Total Activities,活动总数,
+Overdue Count,逾期数,
+Protocol No,方案编号,
+Report No,报告编号,
+Planned Start,计划开始,
+Planned End,计划截止,
+Actual End,实际完成,
+Equipment,设备验证,
+Process,工艺验证,
+Cleaning,清洁验证,
+Computer System,计算机化系统验证,
+Analytical Method,分析方法验证,
+In Progress,进行中,
+Overdue,已逾期,
+Validation Activities Incomplete,验证活动未完成,
+Report Number Missing,缺少验证报告编号,
+All validation activities must be Completed before submitting the plan. Open: {0}.,所有验证活动完成后方可提交主计划。未完成：{0}。,
+Validation report number is required for: {0}.,以下活动缺少验证报告编号：{0}。,
+Validation Master Plan {0} completed.,验证主计划 {0} 已完成。,
+Overdue validation activities in plan {0},验证主计划 {0} 存在逾期验证活动,
+Validation plan {0} ({1}) has overdue activities past {2}. They were marked Overdue automatically. Complete them or reschedule.,验证主计划 {0}（{1}）存在超过 {2} 的逾期验证活动，已自动标记为“已逾期”。请尽快完成或重新排期。,
+QP Authorization Document No.,质量受权人授权文件号
+Authorization Document Date,授权文件日期
+Authorization traceability: the document by which the enterprise granted batch-release authority to this Qualified Person.,授权溯源：企业授予该质量受权人批放行权限的授权文件依据。
+A QP authorization document number is required to release a batch (authorization traceability).,放行批次必须填写质量受权人授权文件号（授权溯源）。
+Authorization Document Required,授权文件必填
+Supplier Audit,供应商审计,
+Audit Finding,审计发现,
+Audit Details,审计详情,
+Supplier,供应商,
+Audit Type,审计类型,
+Onsite,现场审计,
+Remote,远程审计,
+Desktop Review,案卷审查,
+Audit Date,审计日期,
+Lead Auditor,主审员,
+Overall Rating,总体评级,
+Satisfactory,满意,
+Needs Improvement,需改进,
+Unsatisfactory,不满意,
+Audit Scope,审计范围,
+Findings,审计发现,
+Finding Description,发现描述,
+Observation,观察项,
+Category,类别,
+GMP Compliance,GMP 合规,
+Data Integrity,数据可靠性,
+Facility & Equipment,设施与设备,
+Documentation,文件记录,
+Qualification,确认与验证,
+Evidence / Reference,证据/参考,
+Audit Summary,审计总结,
+Bio Pharma Audit Trail,生物医药 审计追踪
+Record Type,记录类型
+Record Name,记录名称
+Change Summary,变更摘要
+From Date,开始日期
+To Date,截止日期
+added row in {0} ({1}),在 {0} 中新增行（{1}）
+added row in {0},在 {0} 中新增行
+updated rows in {0},更新了 {0} 中的行
+removed row from {0} ({1}),从 {0} 中移除行（{1}）
+removed row from {0},从 {0} 中移除行
+Pending Inspection,待检,
+Rejected,不合格,
+Recall Notice No.,召回通知编号,
+Scrap,报废,
+Scrap Disposal Stock Entry,报废处置库存单,
+Concession Scope,让步范围,
+Decision Justification,判定理由,
+Disposal Stock Entry,处置库存单,
+Verification Status,核实状态,
+Pending Verification,待核实,
+Legal Basis,法律依据,
+Drug Administration Law,药品管理法,
+Vaccine Administration Law,疫苗管理法,
+Food Safety Law,食品安全法,
+GMP (2010 Revision),药品生产质量管理规范（2010年修订）,
+Chapter,章,
+Batch Release Decision Matrix,批放行判定矩阵,
+Concession release requires justification and scope.,让步放行必须填写判定理由与让步范围。,
+Recall requires recall notice number and justification.,召回必须填写召回通知编号与判定理由。,
+Scrap requires justification and creates disposal stock entry.,报废必须填写判定理由并生成处置库存单。,
+Rejected batch requires re-inspection before release.,不合格批次须复检合格后方可放行。,
+Recall decision must be reported to authorities per Chapter XII of GMP.,召回判定须按 GMP 通则第十二章要求报告监管部门并启动召回程序。,
+Quarantine,隔离（待检）,
+Hold,冻结,
+Quality Status,质量状态,
+Release Date,放行日期,
+Released By,放行人,
+Quality KPI Summary,质量KPI汇总
+Month,月份
+OOS Opened,OOS新开
+OOS Closed,OOS关闭
+CAPA Opened,CAPA新开
+CAPA Closed,CAPA关闭
+Deviations,偏差数
+Critical Deviations,关键偏差
+Batch Releases,批放行数
+Temp Excursions,温度越限
+Safety Incidents,安全事故
+Batch 360 View,批次360全景视图
+Record Type,记录类型
+Record,单据
+Status,状态
+Date,日期
+Details,详情
+Summary,汇总

@@ -1,0 +1,61 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "label": "From Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "default": "2026-01-01"
+  },
+  {
+   "fieldname": "to_date",
+   "label": "To Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "default": null
+  },
+  {
+   "fieldname": "record_doctype",
+   "label": "Record Type",
+   "fieldtype": "Select",
+   "options": "\nLab Sample\nSample Type\nSampling Point\nTest Method\nInstrument\nStability Study\nMaster Formula\nMaster Formula Version\nBatch Production Record\nControlled Document\nOOS Investigation\nCAPA\nDeviation Report\nChange Control\nTraining Record\nBatch Release Record\nValidation Master Plan\nSupplier Audit\nTemperature Zone\nTemperature Log\nTemperature Excursion\nRegulation Library\nProduct License\nWaste Disposal Log\nSafety Incident\nReason Code\nData Integrity Settings"
+  },
+  {
+   "fieldname": "user",
+   "label": "User",
+   "fieldtype": "Link",
+   "options": "User"
+  },
+  {
+   "fieldname": "record_name",
+   "label": "Record Name",
+   "fieldtype": "Data"
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2026-10-16 00:00:00.000000",
+ "module": "Compliance Foundation",
+ "name": "Bio Pharma Audit Trail",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Lab Sample",
+ "report_name": "Bio Pharma Audit Trail",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Bio Pharma QA Officer"
+  },
+  {
+   "role": "Bio Pharma QP"
+  }
+ ]
+}

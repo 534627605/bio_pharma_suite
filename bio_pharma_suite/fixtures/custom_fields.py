@@ -57,7 +57,8 @@ def get_custom_fields():
 				fieldname="quality_status",
 				label="Quality Status",
 				fieldtype="Select",
-				options="Released\nQuarantine\nHold",
+				# 待检 Quarantine / 合格 Released / 不合格 Rejected / 冻结 Hold（待改善复检/召回中）
+				options="Quarantine\nReleased\nRejected\nHold",
 				insert_after="expiry_date",
 				default="Quarantine",
 				in_list_view=1,

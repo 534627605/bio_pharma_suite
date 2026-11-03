@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "autoname": "format:TR-{YY}-{#####}",
+ "creation": "2026-10-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "training_section",
+  "training_type",
+  "training_date",
+  "col_t",
+  "trainer",
+  "status",
+  "doc_section",
+  "controlled_document",
+  "document_version",
+  "participants_section",
+  "participants",
+  "result_section",
+  "pass_count",
+  "fail_count",
+  "col_result",
+  "notes",
+  "closure_section",
+  "esign_confirmed",
+  "closed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "training_section",
+   "fieldtype": "Section Break",
+   "label": "Training"
+  },
+  {
+   "fieldname": "training_type",
+   "fieldtype": "Select",
+   "label": "Training Type",
+   "options": "Initial\nRetraining\nPeriodic\nRead Training",
+   "default": "Initial",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "training_date",
+   "fieldtype": "Date",
+   "label": "Training Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nOngoing\nCompleted\nCancelled",
+   "default": "Planned",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "doc_section",
+   "fieldtype": "Section Break",
+   "label": "Controlled Document"
+  },
+  {
+   "fieldname": "controlled_document",
+   "fieldtype": "Link",
+   "label": "Controlled Document",
+   "options": "Controlled Document",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "document_version",
+   "fieldtype": "Data",
+   "label": "Document Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "participants_section",
+   "fieldtype": "Section Break",
+   "label": "Participants"
+  },
+  {
+   "fieldname": "participants",
+   "fieldtype": "Table",
+   "label": "Participants",
+   "options": "Training Participant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "result_section",
+   "fieldtype": "Section Break",
+   "label": "Result Summary"
+  },
+  {
+   "fieldname": "pass_count",
+   "fieldtype": "Int",
+   "label": "Pass Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fail_count",
+   "fieldtype": "Int",
+   "label": "Fail Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_result",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "closure_section",
+   "fieldtype": "Section Break",
+   "label": "Closure"
+  },
+  {
+   "fieldname": "esign_confirmed",
+   "fieldtype": "Check",
+   "label": "E-Signature Confirmed (21 CFR Part 11)",
+   "default": "0"
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Date",
+   "label": "Closed On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00",
+ "modified_by": "Administrator",
+ "module": "QMS GMP",
+ "name": "Training Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QP",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

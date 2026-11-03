@@ -1,0 +1,205 @@
+{
+ "doctype": "DocType",
+ "name": "Deviation Report",
+ "module": "QMS GMP",
+ "autoname": "format:DEV-{YY}-{#####}",
+ "is_submittable": 1,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "item_code",
+  "batch_no",
+  "work_order",
+  "lab_sample",
+  "col_source",
+  "deviation_type",
+  "severity",
+  "detected_by",
+  "detected_on",
+  "issue_section",
+  "description",
+  "col_issue",
+  "immediate_action",
+  "investigation_section",
+  "root_cause",
+  "col_inv",
+  "ncr_reference",
+  "capa_reference",
+  "compliance_section",
+  "esign_confirmed"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch No",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order"
+  },
+  {
+   "fieldname": "lab_sample",
+   "fieldtype": "Link",
+   "label": "Lab Sample",
+   "options": "Lab Sample"
+  },
+  {
+   "fieldname": "col_source",
+   "fieldtype": "Column Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "deviation_type",
+   "fieldtype": "Select",
+   "label": "Deviation Type",
+   "reqd": 1,
+   "options": "Process\nEquipment\nDocument\nMaterial\nEnvironment\nOther"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "reqd": 1,
+   "options": "Critical\nMajor\nMinor",
+   "default": "Minor"
+  },
+  {
+   "fieldname": "detected_by",
+   "fieldtype": "Link",
+   "label": "Detected By",
+   "options": "User"
+  },
+  {
+   "fieldname": "detected_on",
+   "fieldtype": "Date",
+   "label": "Detected On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issue_section",
+   "fieldtype": "Section Break",
+   "label": "Issue & Response"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Deviation Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_issue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "immediate_action",
+   "fieldtype": "Small Text",
+   "label": "Immediate Action",
+   "reqd": 1
+  },
+  {
+   "fieldname": "investigation_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation"
+  },
+  {
+   "fieldname": "root_cause",
+   "fieldtype": "Small Text",
+   "label": "Root Cause"
+  },
+  {
+   "fieldname": "col_inv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ncr_reference",
+   "fieldtype": "Link",
+   "label": "Official Non Conformance",
+   "options": "Non Conformance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "capa_reference",
+   "fieldtype": "Link",
+   "label": "CAPA Reference",
+   "options": "CAPA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance"
+  },
+  {
+   "fieldname": "esign_confirmed",
+   "fieldtype": "Check",
+   "label": "E-Signature Confirmed"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QP",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "actions": []
+}

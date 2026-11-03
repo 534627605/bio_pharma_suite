@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "autoname": "format:SS-{#####}",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "study_section", "item_code", "batch_no", "col_study", "study_type", "standard", "responsible",
+  "conditions_section", "start_date", "duration_months", "col_conditions", "storage_zone", "status",
+  "timepoints_section", "timepoints", "remarks"
+ ],
+ "fields": [
+  {"fieldname": "study_section", "fieldtype": "Section Break", "label": "Study"},
+  {"fieldname": "item_code", "fieldtype": "Link", "label": "Item", "options": "Item", "reqd": 1, "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "batch_no", "fieldtype": "Link", "label": "Batch", "options": "Batch", "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "col_study", "fieldtype": "Column Break"},
+  {"fieldname": "study_type", "fieldtype": "Select", "label": "Study Type", "options": "Long Term\nIntermediate\nAccelerated", "reqd": 1, "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "standard", "fieldtype": "Select", "label": "Standard", "options": "ICH Q1A\nICH Q1B\nCustom", "default": "ICH Q1A"},
+  {"fieldname": "responsible", "fieldtype": "Link", "label": "Responsible", "options": "User"},
+  {"fieldname": "conditions_section", "fieldtype": "Section Break", "label": "Conditions"},
+  {"fieldname": "start_date", "fieldtype": "Date", "label": "Start Date", "reqd": 1},
+  {"fieldname": "duration_months", "fieldtype": "Int", "label": "Duration (Months)", "reqd": 1},
+  {"fieldname": "col_conditions", "fieldtype": "Column Break"},
+  {"fieldname": "storage_zone", "fieldtype": "Link", "label": "Storage Zone", "options": "Temperature Zone", "in_standard_filter": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Planning\nOngoing\nCompleted\nDiscontinued", "default": "Planning", "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "timepoints_section", "fieldtype": "Section Break", "label": "Timepoints (Auto Sampling)"},
+  {"fieldname": "timepoints", "fieldtype": "Table", "label": "Timepoints", "options": "Stability Timepoint", "reqd": 1},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {"group": "Samples", "link_doctype": "Lab Sample", "link_fieldname": "reference_name"}
+ ],
+ "modified": "2026-10-14 10:00:00.000000",
+ "module": "LIMS",
+ "name": "Stability Study",
+ "owner": "Administrator",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "report": 1, "email": 1, "share": 1},
+  {"role": "Bio Pharma Lab Supervisor", "read": 1, "write": 1, "create": 1, "report": 1, "print": 1, "email": 1},
+  {"role": "Bio Pharma QC Analyst", "read": 1, "write": 1, "create": 1, "report": 1, "print": 1, "email": 1},
+  {"role": "Bio Pharma QA Officer", "read": 1, "report": 1, "print": 1, "email": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

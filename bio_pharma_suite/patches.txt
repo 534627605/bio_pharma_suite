@@ -2,3 +2,7 @@
 
 [post_model_sync]
 bio_pharma_suite.patches.post_install.setup_bio_pharma_roles
+bio_pharma_suite.patches.post_install.qi_reference_lab_sample
+bio_pharma_suite.patches.post_install.enable_track_changes
+bio_pharma_suite.patches.post_install.seed_regulation_library
+bio_pharma_suite.patches.post_install.create_quality_dashboard

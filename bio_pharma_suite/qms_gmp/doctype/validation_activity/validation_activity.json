@@ -1,0 +1,103 @@
+{
+ "doctype": "DocType",
+ "name": "Validation Activity",
+ "module": "QMS GMP",
+ "istable": 1,
+ "autoname": "hash",
+ "field_order": [
+  "activity_section",
+  "validation_type",
+  "subject",
+  "equipment",
+  "col_a",
+  "protocol_no",
+  "report_no",
+  "status_row",
+  "schedule_section",
+  "planned_start",
+  "planned_end",
+  "col_s",
+  "actual_end",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_section",
+   "fieldtype": "Section Break",
+   "label": "Activity Section"
+  },
+  {
+   "fieldname": "validation_type",
+   "fieldtype": "Select",
+   "label": "Validation Type",
+   "reqd": 1,
+   "options": "Equipment\nProcess\nCleaning\nComputer System\nFacility"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "equipment",
+   "fieldtype": "Link",
+   "label": "Equipment",
+   "options": "Instrument"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break",
+   "label": "Col A"
+  },
+  {
+   "fieldname": "protocol_no",
+   "fieldtype": "Data",
+   "label": "Protocol No"
+  },
+  {
+   "fieldname": "report_no",
+   "fieldtype": "Data",
+   "label": "Report No"
+  },
+  {
+   "fieldname": "status_row",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nIn Progress\nCompleted\nOverdue",
+   "default": "Planned"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule Section"
+  },
+  {
+   "fieldname": "planned_start",
+   "fieldtype": "Date",
+   "label": "Planned Start"
+  },
+  {
+   "fieldname": "planned_end",
+   "fieldtype": "Date",
+   "label": "Planned End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_s",
+   "fieldtype": "Column Break",
+   "label": "Col S"
+  },
+  {
+   "fieldname": "actual_end",
+   "fieldtype": "Date",
+   "label": "Actual End"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "permissions": []
+}

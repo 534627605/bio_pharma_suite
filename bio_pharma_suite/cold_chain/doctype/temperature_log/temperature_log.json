@@ -10,6 +10,7 @@
   "reading_timestamp",
   "temperature",
   "source",
+  "instrument",
   "column_break_0",
   "has_excursion",
   "excursion"
@@ -51,6 +52,14 @@
    "fieldtype": "Select",
    "label": "Source",
    "options": "IoT API\nManual\nCSV Import"
+  },
+  {
+   "fieldname": "instrument",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Instrument",
+   "options": "Instrument",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_0",

@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "autoname": "format:CAPA-{YY}-{#####}",
+ "creation": "2026-10-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "source_type",
+  "oos_investigation",
+  "supplier_audit",
+  "deviation_report",
+  "non_conformance",
+  "col_source",
+  "capa_type",
+  "status",
+  "responsible",
+  "target_completion",
+  "issue_section",
+  "description",
+  "root_cause_section",
+  "root_cause",
+  "actions_section",
+  "actions",
+  "verification_section",
+  "effectiveness_check",
+  "effectiveness_check_date",
+  "col_verification",
+  "effective",
+  "closure_section",
+  "esign_confirmed",
+  "closed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "source_type",
+   "fieldtype": "Select",
+   "label": "Source Type",
+   "options": "OOS Investigation\nDeviation Report\nNon Conformance\nManual\nSupplier Audit",
+   "default": "OOS Investigation",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "oos_investigation",
+   "fieldtype": "Link",
+   "label": "OOS Investigation",
+   "options": "OOS Investigation",
+   "in_standard_filter": 1,
+   "depends_on": "eval:doc.source_type=='OOS Investigation'"
+  },
+  {
+   "fieldname": "supplier_audit",
+   "fieldtype": "Link",
+   "label": "Supplier Audit",
+   "options": "Supplier Audit",
+   "in_standard_filter": 1,
+   "depends_on": "eval:doc.source_type=='Supplier Audit'"
+  },
+  {
+   "fieldname": "deviation_report",
+   "fieldtype": "Link",
+   "label": "Deviation Report",
+   "options": "Deviation Report",
+   "read_only": 0
+  },
+  {
+   "fieldname": "non_conformance",
+   "fieldtype": "Link",
+   "label": "Non Conformance",
+   "options": "Non Conformance",
+   "in_standard_filter": 1,
+   "depends_on": "eval:['Non Conformance','Deviation'].includes(doc.source_type)"
+  },
+  {
+   "fieldname": "col_source",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "capa_type",
+   "fieldtype": "Select",
+   "label": "CAPA Type",
+   "options": "Corrective\nPreventive\nCorrective and Preventive",
+   "default": "Corrective and Preventive",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nVerification\nClosed",
+   "default": "Open",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "User"
+  },
+  {
+   "fieldname": "target_completion",
+   "fieldtype": "Date",
+   "label": "Target Completion"
+  },
+  {
+   "fieldname": "issue_section",
+   "fieldtype": "Section Break",
+   "label": "Issue Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "root_cause_section",
+   "fieldtype": "Section Break",
+   "label": "Root Cause Analysis"
+  },
+  {
+   "fieldname": "root_cause",
+   "fieldtype": "Small Text",
+   "label": "Root Cause"
+  },
+  {
+   "fieldname": "actions_section",
+   "fieldtype": "Section Break",
+   "label": "Corrective / Preventive Actions"
+  },
+  {
+   "fieldname": "actions",
+   "fieldtype": "Table",
+   "label": "Actions",
+   "options": "CAPA Action"
+  },
+  {
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Effectiveness Verification"
+  },
+  {
+   "fieldname": "effectiveness_check",
+   "fieldtype": "Small Text",
+   "label": "Effectiveness Check"
+  },
+  {
+   "fieldname": "effectiveness_check_date",
+   "fieldtype": "Date",
+   "label": "Effectiveness Check Date"
+  },
+  {
+   "fieldname": "col_verification",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective",
+   "fieldtype": "Select",
+   "label": "Effectiveness Verdict",
+   "options": "Pending\nEffective\nIneffective",
+   "default": "Pending",
+   "depends_on": "effectiveness_check"
+  },
+  {
+   "fieldname": "closure_section",
+   "fieldtype": "Section Break",
+   "label": "Closure"
+  },
+  {
+   "fieldname": "esign_confirmed",
+   "fieldtype": "Check",
+   "label": "E-Signature Confirmed (21 CFR Part 11)",
+   "default": "0"
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Date",
+   "label": "Closed On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00",
+ "modified_by": "Administrator",
+ "module": "QMS GMP",
+ "name": "CAPA",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QP",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "options": null
+}

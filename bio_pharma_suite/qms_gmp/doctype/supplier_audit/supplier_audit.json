@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "autoname": "format:SA-{YY}-{#####}",
+ "creation": "2026-10-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "supplier",
+  "audit_type",
+  "col_details",
+  "audit_date",
+  "lead_auditor",
+  "overall_rating",
+  "scope_section",
+  "scope",
+  "findings_section",
+  "findings",
+  "summary_section",
+  "summary",
+  "closure_section",
+  "esign_confirmed",
+  "capa_reference",
+  "closed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Audit Details"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "audit_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Audit Type",
+   "options": "Onsite\nRemote\nDesktop Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "label": "Audit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead_auditor",
+   "fieldtype": "Link",
+   "label": "Lead Auditor",
+   "options": "User"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Overall Rating",
+   "options": "Pending\nSatisfactory\nNeeds Improvement\nUnsatisfactory",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Small Text",
+   "label": "Audit Scope"
+  },
+  {
+   "fieldname": "findings_section",
+   "fieldtype": "Section Break",
+   "label": "Findings"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Table",
+   "label": "Findings",
+   "options": "Audit Finding"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Conclusion"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text",
+   "label": "Audit Summary"
+  },
+  {
+   "fieldname": "closure_section",
+   "fieldtype": "Section Break",
+   "label": "Closure"
+  },
+  {
+   "default": "0",
+   "fieldname": "esign_confirmed",
+   "fieldtype": "Check",
+   "label": "E-Signature Confirmed (21 CFR Part 11)"
+  },
+  {
+   "fieldname": "capa_reference",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "CAPA Reference",
+   "options": "CAPA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Date",
+   "label": "Closed On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00",
+ "modified_by": "Administrator",
+ "module": "QMS GMP",
+ "name": "Supplier Audit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QP",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

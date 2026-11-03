@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "autoname": "format:CC-{YY}-{#####}",
+ "creation": "2026-10-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "change_type",
+  "title",
+  "col_details",
+  "status",
+  "requested_by",
+  "reason_section",
+  "reason",
+  "impact_section",
+  "impact_assessment",
+  "col_impact",
+  "controlled_document",
+  "capa_reference",
+  "closure_section",
+  "esign_confirmed",
+  "closed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Change Details"
+  },
+  {
+   "fieldname": "change_type",
+   "fieldtype": "Select",
+   "label": "Change Type",
+   "options": "Method Change\nFormula Change\nEquipment Change\nMaterial Change\nDocument Change\nOther",
+   "default": "Document Change",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Change Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Review\nApproved\nImplemented\nClosed",
+   "default": "Open",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User"
+  },
+  {
+   "fieldname": "reason_section",
+   "fieldtype": "Section Break",
+   "label": "Reason & Description"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Change",
+   "reqd": 1
+  },
+  {
+   "fieldname": "impact_section",
+   "fieldtype": "Section Break",
+   "label": "Impact Assessment"
+  },
+  {
+   "fieldname": "impact_assessment",
+   "fieldtype": "Small Text",
+   "label": "Impact Assessment",
+   "depends_on": ""
+  },
+  {
+   "fieldname": "col_impact",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "controlled_document",
+   "fieldtype": "Link",
+   "label": "Affected Controlled Document",
+   "options": "Controlled Document",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "capa_reference",
+   "fieldtype": "Link",
+   "label": "Related CAPA",
+   "options": "CAPA"
+  },
+  {
+   "fieldname": "closure_section",
+   "fieldtype": "Section Break",
+   "label": "Closure"
+  },
+  {
+   "fieldname": "esign_confirmed",
+   "fieldtype": "Check",
+   "label": "E-Signature Confirmed (21 CFR Part 11)",
+   "default": "0"
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Date",
+   "label": "Closed On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00",
+ "modified_by": "Administrator",
+ "module": "QMS GMP",
+ "name": "Change Control",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "Bio Pharma QP",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

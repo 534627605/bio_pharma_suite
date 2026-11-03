@@ -1,0 +1,247 @@
+{
+ "actions": [],
+ "autoname": "format:OOS-{YY}-{#####}",
+ "creation": "2026-10-14 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "quality_inspection",
+  "lab_sample",
+  "col_details",
+  "item_code",
+  "batch_no",
+  "failed_parameters",
+  "phase_section",
+  "phase",
+  "responsible",
+  "col_phase",
+  "status",
+  "non_conformance",
+  "investigation_section",
+  "hypothesis",
+  "re_test_required",
+  "re_test_quality_inspection",
+  "conclusion_section",
+  "conclusion",
+  "impact_assessment",
+  "closure_section",
+  "investigation_summary",
+  "esign_confirmed",
+  "capa_reference",
+  "closed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation Details"
+  },
+  {
+   "fieldname": "quality_inspection",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Quality Inspection",
+   "options": "Quality Inspection",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lab_sample",
+   "fieldtype": "Link",
+   "label": "Lab Sample",
+   "options": "Lab Sample"
+  },
+  {
+   "fieldname": "col_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "quality_inspection.item_code",
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "quality_inspection.batch_no",
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch No",
+   "options": "Batch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "failed_parameters",
+   "fieldtype": "Small Text",
+   "label": "Failed Parameters"
+  },
+  {
+   "fieldname": "phase_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation Phase"
+  },
+  {
+   "default": "Phase I - Laboratory Investigation",
+   "fieldname": "phase",
+   "fieldtype": "Select",
+   "label": "Phase",
+   "options": "Phase I - Laboratory Investigation\nPhase II - Full Scale Investigation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_phase",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nUnder Investigation\nClosed"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "User"
+  },
+  {
+   "fieldname": "non_conformance",
+   "fieldtype": "Link",
+   "label": "Non Conformance",
+   "options": "Non Conformance"
+  },
+  {
+   "fieldname": "investigation_section",
+   "fieldtype": "Section Break",
+   "label": "Laboratory Investigation"
+  },
+  {
+   "fieldname": "hypothesis",
+   "fieldtype": "Small Text",
+   "label": "Hypothesis"
+  },
+  {
+   "default": "0",
+   "fieldname": "re_test_required",
+   "fieldtype": "Check",
+   "label": "Re-test Required"
+  },
+  {
+   "depends_on": "re_test_required",
+   "fieldname": "re_test_quality_inspection",
+   "fieldtype": "Link",
+   "label": "Re-test Quality Inspection",
+   "options": "Quality Inspection"
+  },
+  {
+   "fieldname": "conclusion_section",
+   "fieldtype": "Section Break",
+   "label": "Conclusion"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "conclusion",
+   "fieldtype": "Select",
+   "label": "Conclusion",
+   "options": "Pending\nInvalid Result (Test/Handling Error)\nOOS Confirmed\nOut of Trend"
+  },
+  {
+   "fieldname": "impact_assessment",
+   "fieldtype": "Small Text",
+   "label": "Impact Assessment"
+  },
+  {
+   "fieldname": "closure_section",
+   "fieldtype": "Section Break",
+   "label": "Closure"
+  },
+  {
+   "fieldname": "investigation_summary",
+   "fieldtype": "Text",
+   "label": "Investigation Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "esign_confirmed",
+   "fieldtype": "Check",
+   "label": "E-Signature Confirmed (21 CFR Part 11)"
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Date",
+   "label": "Closed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "capa_reference",
+   "fieldtype": "Link",
+   "label": "CAPA Reference",
+   "options": "CAPA",
+   "read_only": 1,
+   "in_standard_filter": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00",
+ "modified_by": "Administrator",
+ "module": "QMS GMP",
+ "name": "OOS Investigation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QA Officer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QP",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Bio Pharma QC Analyst",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

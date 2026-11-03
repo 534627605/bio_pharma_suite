@@ -1,0 +1,24 @@
+{
+ "app": "bio_pharma_suite",
+ "creation": "2026-10-14 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Dock",
+ "idx": 0,
+ "items": [
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "quality-seal-duotone",
+   "link_to": "Bio Pharma Suite",
+   "link_type": "Sidebar",
+   "title": "Bio Pharma Suite"
+  }
+ ],
+ "modified": "2026-10-14 10:00:00.000000",
+ "modified_by": "Administrator",
+ "mount_on": "",
+ "name": "bio_pharma_suite",
+ "owner": "Administrator",
+ "standard": 1,
+ "user": ""
+}

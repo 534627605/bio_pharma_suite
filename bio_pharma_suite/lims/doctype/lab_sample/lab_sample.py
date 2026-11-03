@@ -14,9 +14,15 @@ class LabSample(Document):
 	"""
 
 	def validate(self):
+		self.set_default_company()
 		self.set_identification_codes()
 		self.validate_due_date()
 		self.validate_tests()
+
+	def set_default_company(self):
+		"""官方 QI set_company 会回读上游单据的 company 字段——兜底填充。"""
+		if not self.company:
+			self.company = frappe.defaults.get_global_default("company") or None
 
 	def set_identification_codes(self):
 		"""回填双码：autoname 之后 name 才可用（validate 与 after_insert 双保险）"""

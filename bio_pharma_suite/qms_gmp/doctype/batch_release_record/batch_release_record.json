@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "autoname": "format:BRR-{YY}-{#####}",
+ "creation": "2026-10-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "batch_no",
+  "item_code",
+  "col_details",
+  "manufacturing_date",
+  "expiry_date",
+  "check_section",
+  "qi_total",
+  "qi_rejected",
+  "col_check",
+  "open_oos",
+  "open_excursions",
+  "decision_section",
+  "release_decision",
+  "decision_justification",
+  "rejection_reason",
+  "recall_notice_no",
+  "concession_scope",
+  "disposal_stock_entry",
+  "signatures_section",
+  "prepared_by",
+  "esign_prepared",
+  "col_sign",
+  "qp_approver",
+  "esign_qp",
+  "appointment_doc_no",
+  "appointment_doc_date",
+  "col_sign2",
+  "release_effective_date",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Batch Details"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1,
+   "fetch_from": "batch_no.item",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "col_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "manufacturing_date",
+   "fieldtype": "Date",
+   "label": "Manufacturing Date",
+   "read_only": 1,
+   "fetch_from": "batch_no.manufacturing_date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "read_only": 1,
+   "fetch_from": "batch_no.expiry_date"
+  },
+  {
+   "fieldname": "check_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance Checks (auto)"
+  },
+  {
+   "fieldname": "qi_total",
+   "fieldtype": "Int",
+   "label": "Total Accepted+Rejected QIs",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "qi_rejected",
+   "fieldtype": "Int",
+   "label": "Rejected QIs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_check",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "open_oos",
+   "fieldtype": "Int",
+   "label": "Open OOS Investigations",
+   "read_only": 1
+  },
+  {
+   "fieldname": "open_excursions",
+   "fieldtype": "Int",
+   "label": "Unresolved Temperature Excursions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decision_section",
+   "fieldtype": "Section Break",
+   "label": "Release Decision"
+  },
+  {
+   "fieldname": "release_decision",
+   "fieldtype": "Select",
+   "label": "Release Decision",
+   "options": "Released\nConcession Release\nRejected\nRecall\nScrap",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "decision_justification",
+   "fieldtype": "Small Text",
+   "label": "Decision Justification",
+   "depends_on": "eval:['Concession Release','Recall','Scrap','Rejected'].includes(doc.release_decision)"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason (rework & retest required)",
+   "depends_on": "eval:doc.release_decision=='Rejected'"
+  },
+  {
+   "fieldname": "concession_scope",
+   "fieldtype": "Small Text",
+   "label": "Concession Scope",
+   "description": "Permitted deviation scope for concession release: affected quantity, deviation accepted, restrictions on use.",
+   "depends_on": "eval:doc.release_decision=='Concession Release'"
+  },
+  {
+   "fieldname": "recall_notice_no",
+   "fieldtype": "Data",
+   "label": "Recall Notice No.",
+   "depends_on": "eval:doc.release_decision=='Recall'"
+  },
+  {
+   "fieldname": "disposal_stock_entry",
+   "fieldtype": "Link",
+   "label": "Disposal Stock Entry",
+   "options": "Stock Entry",
+   "description": "Submitted Stock Entry moving the batch to a Rejection/Scrap warehouse (inventory and accounting write-off).",
+   "depends_on": "eval:doc.release_decision=='Scrap'"
+  },
+  {
+   "fieldname": "signatures_section",
+   "fieldtype": "Section Break",
+   "label": "Dual Electronic Signatures (21 CFR Part 11)"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By (QA)",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "esign_prepared",
+   "fieldtype": "Check",
+   "label": "E-Signature: Prepared By"
+  },
+  {
+   "fieldname": "col_sign",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qp_approver",
+   "fieldtype": "Link",
+   "label": "Approved By (Qualified Person)",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "esign_qp",
+   "fieldtype": "Check",
+   "label": "E-Signature: Qualified Person"
+  },
+  {
+   "fieldname": "col_sign2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "release_effective_date",
+   "fieldtype": "Date",
+   "label": "Release Effective Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "appointment_doc_no",
+   "fieldtype": "Data",
+   "label": "QP Authorization Document No.",
+   "description": "Authorization traceability: the document by which the enterprise granted batch-release authority to this Qualified Person."
+  },
+  {
+   "fieldname": "appointment_doc_date",
+   "fieldtype": "Date",
+   "label": "Authorization Document Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00",
+ "modified_by": "Administrator",
+ "module": "QMS GMP",
+ "name": "Batch Release Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Bio Pharma QA Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QP",
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1
+  },
+  {
+   "role": "Bio Pharma QC Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
